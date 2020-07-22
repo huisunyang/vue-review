@@ -11,6 +11,10 @@ const routes = [
   {
     path: '/computedAndWatch',
     component: () => import('../views/computedAndWatch.vue')
+  },
+  {
+    path: '/filter',
+    component: () => import('../views/filter.vue')
   }
 ]
 

@@ -16,6 +16,9 @@ export default {
   },
   computed: {
     num2 () {
+      // setTimeout(() => {
+      //   console.log('test')
+      // }, 1000)
       return this.num + 10
     }
   },
