@@ -23,6 +23,10 @@ const routes = [
       console.log('beforeEnter')
       next()
     }
+  },
+  {
+    path: '/componentFunction',
+    component: () => import('../views/componentFunction.vue')
   }
 ]
 
