@@ -7,9 +7,9 @@ Vue.config.productionTip = false
 
 // 全局注册filter
 console.log(filters)
-Object.keys(filters).forEach(item => Vue.filter(item, filters[item]))
+Object.keys(filters).forEach((item) => Vue.filter(item, filters[item]))
 console.log('136')
 new Vue({
   router,
-  render: h => h(App)
+  render: (h) => h(App)
 }).$mount('#app')
