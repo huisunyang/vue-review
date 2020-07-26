@@ -16,6 +16,9 @@ export default {
     toFixed: value => {
       return value.toFixed(2)
     }
+  },
+  created () {
+    console.log(this.$route)
   }
   /*
     filter主要用于过滤一些字段，像日期，保留两位小数这种等需要统一处理的可以全部注册，

@@ -6,6 +6,7 @@ const routes = [
   {
     path: '/',
     name: 'HelloWorld',
+    // 路由懒加载
     component: () => import('../components/HelloWorld.vue')
   },
   {
@@ -13,8 +14,10 @@ const routes = [
     component: () => import('../views/computedAndWatch.vue')
   },
   {
-    path: '/filter',
-    component: () => import('../views/filter.vue')
+    path: '/filter/',
+    name: 'filter',
+    component: () => import('../views/filter.vue'),
+    props: true
   },
   {
     path: '/routerFunction',
@@ -27,11 +30,24 @@ const routes = [
   {
     path: '/componentFunction',
     component: () => import('../views/componentFunction.vue')
+  },
+  {
+    // 动态路由参数 以:开头 ？表示可选
+    path: '/router/:id?',
+    component: () => import('../views/router.vue')
   }
 ]
 
 const router = new VueRouter({
-  routes
+  routes,
+  // 滚动行为
+  scrollBehavior (to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { x: 0, y: 0 }
+    }
+  }
 })
 // 全局钩子函数
 // 全局前置守卫 通常用于处理登录拦截
