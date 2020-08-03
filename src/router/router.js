@@ -35,6 +35,10 @@ const routes = [
     // 动态路由参数 以:开头 ？表示可选
     path: '/router/:id?',
     component: () => import('../views/router.vue')
+  },
+  {
+    path: '/apiTest',
+    component: () => import('../views/apiTest.vue')
   }
 ]
 
