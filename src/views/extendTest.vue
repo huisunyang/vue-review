@@ -6,13 +6,20 @@
 </template>
 
 <script>
+const componentA = {
+  created () {
+    console.log('我是componentA')
+  }
+}
 export default {
+  extends: componentA,
   data () {
     return {
       a: ''
     }
   },
   created () {
+    console.log('我是基类组件')
     console.log(this.a)
   },
   methods: {

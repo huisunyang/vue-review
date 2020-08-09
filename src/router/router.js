@@ -39,10 +39,17 @@ const routes = [
   {
     path: '/apiTest',
     component: () => import('../views/apiTest.vue')
+  }, {
+    path: '/extendTest',
+    component: () => import('../views/extendTest.vue')
   },
   {
     path: '/slot',
     component: () => import('../views/slot.vue')
+  },
+  {
+    path: '/directive',
+    component: () => import('../views/directive.vue')
   }
 ]
 
